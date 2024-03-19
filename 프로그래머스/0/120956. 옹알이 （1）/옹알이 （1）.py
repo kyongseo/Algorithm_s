@@ -1,11 +1,9 @@
 def solution(babbling):
-    answer = 0
-    word = ["aya", "ye", "woo", "ma"]
-    
+    c = 0
     for b in babbling:
-        for w in word:
-            b = b.replace(w, ' ')
-        b = b.replace(' ', '')
-        if len(b) == 0:
-            answer += 1
-    return answer
+        for w in [ "aya", "ye", "woo", "ma" ]:
+            if w * 2 not in b:
+                b = b.replace(w, ' ')
+        if len(b.strip()) == 0:
+            c += 1
+    return c
