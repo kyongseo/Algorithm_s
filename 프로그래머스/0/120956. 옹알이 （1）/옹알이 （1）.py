@@ -1,9 +1,18 @@
 def solution(babbling):
-    c = 0
-    for b in babbling:
-        for w in [ "aya", "ye", "woo", "ma" ]:
-            if w * 2 not in b:
-                b = b.replace(w, ' ')
-        if len(b.strip()) == 0:
-            c += 1
-    return c
+    answer = 0
+    
+    for ba in babbling:
+        if check(ba):
+            answer += 1
+    return answer
+
+def check(s):
+    if len(s) == 0:
+        return True
+    if len(s) == 1:
+        return False
+    if s[:2] == "ye" or s[:2] == "ma":
+        return check(s[2:])
+    elif s[:3] == "aya" or s[:3] == "woo":
+        return check(s[3:])
+    return False
