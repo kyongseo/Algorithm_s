@@ -8,4 +8,3 @@ def solution(x):
         answer = False
     return answer
 
-# return x % sum([int(c) for c in str(x)]) == 0
