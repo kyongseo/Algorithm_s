@@ -1,3 +1,3 @@
 def solution(n):
-    
-    return ('수박'*n) [:n]
+    answer = "수박" * n
+    return answer [:n]
