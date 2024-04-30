@@ -1,6 +1,6 @@
-SELECT NAME, COUNT(NAME) AS "COUNT"
-FROM ANIMAL_INS
-WHERE NAME IS NOT NULL
-GROUP BY NAME
-HAVING COUNT(NAME) >= 2
-ORDER BY NAME
+select NAME, count(NAME) as COUNT
+from ANIMAL_INS
+where NAME is not null 
+group by NAME
+having count(NAME) >=2
+order by NAME 
