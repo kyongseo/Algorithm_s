@@ -1,21 +1,23 @@
 from collections import deque
 
-queue = deque()
+k = int(input())
 
-T = int(input())
-for _ in range(T):
-    N, M = map(int, input().split())
-    queue = deque(map(int, input().split()))
-    queue = deque([(i, idx) for idx, i in enumerate(queue)])
-
+for _ in range(k):
+    n, m = map(int, input().split())
+    queue = deque(list(map(int, input().split())))
     count = 0
-    while True:
-        if queue[0][0] == max(queue, key=lambda x: x[0])[0]:
-            count += 1
-            if queue[0][1] == M:
+    while queue:
+        best = max(queue)  
+        front = queue.popleft() 
+        m -= 1 
+
+        if best == front: 
+            count += 1 
+            if m < 0:
                 print(count)
                 break
-            else:
-                queue.popleft()
-        else:
-            queue.append(queue.popleft())
+
+        else:  
+            queue.append(front)
+            if m < 0 :  
+                m = len(queue) - 1 
