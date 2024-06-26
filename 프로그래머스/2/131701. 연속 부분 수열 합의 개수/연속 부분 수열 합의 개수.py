@@ -1,9 +1,12 @@
 def solution(elements):
-    le = []
-    elements = elements + elements
-    for i in range(1, len(elements) // 2 + 1):
-        for j in range(len(elements) // 2):
-            n = sum(elements[j:i+j])
-            le.append(n)
+    extended_elements = elements + elements
+    unique_sums = set()  
 
-    return len(set(le))
+    n = len(elements)  
+
+    for length in range(1, n + 1):
+        for start in range(n):
+            part_sum = sum(extended_elements[start:start + length])
+            unique_sums.add(part_sum)
+            
+    return len(unique_sums)
