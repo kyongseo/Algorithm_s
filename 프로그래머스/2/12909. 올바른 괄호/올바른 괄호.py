@@ -8,7 +8,7 @@ def solution(s):
                 return False
             else:
                 stack.pop()
-    if stack != []: 
-        return False
-    return True
+    if stack == []:
+        return True
+    return False
 
