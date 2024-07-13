@@ -1,5 +1,6 @@
 def solution(progresses, speeds):
     answer = []
+    
     while progresses:
         cnt = 0
         for i in range(len(progresses)):
