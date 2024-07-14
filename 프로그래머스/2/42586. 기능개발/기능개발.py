@@ -1,6 +1,6 @@
 def solution(progresses, speeds):
     answer = []
-    
+
     while progresses:
         cnt = 0
         for i in range(len(progresses)):
@@ -10,5 +10,5 @@ def solution(progresses, speeds):
             speeds.pop(0)
             cnt += 1
         if cnt > 0:
-            answer.append(cnt)
+                answer.append(cnt)
     return answer
