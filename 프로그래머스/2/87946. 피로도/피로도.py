@@ -1,13 +1,13 @@
 from itertools import permutations
 
 def solution(k, dungeons):
-    answer = -1
-    
-    for order in permutations(dungeons): #6
+    answer = 0
+
+    for order in permutations(dungeons): 
         ans = 0 
-        tmp = k # 80
-        
-        for under, use in order: # 80, 20
+        tmp = k 
+
+        for under, use in order: 
             if tmp >= under:
                 tmp -= use
                 ans += 1
