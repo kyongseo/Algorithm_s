@@ -1,6 +1,5 @@
 import heapq
 
-
 def solution(scoville, k):
     heap = []
     for num in scoville:
