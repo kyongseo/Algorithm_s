@@ -1,17 +1,18 @@
 from itertools import permutations
 
 def solution(k, dungeons):
-    answer = 0
+    answer = 0 
 
-    for order in permutations(dungeons): 
-        ans = 0 
-        tmp = k 
+    for dun in permutations(dungeons):
 
-        for under, use in order: 
-            if tmp >= under:
+        ans = 0
+        tmp = k
+        for min, use in dun:
+            if tmp >= min:
                 tmp -= use
                 ans += 1
-
         if ans > answer:
             answer = ans
+
     return answer
+
