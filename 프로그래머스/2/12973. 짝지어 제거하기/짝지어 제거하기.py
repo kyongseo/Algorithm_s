@@ -1,6 +1,5 @@
 def solution(s):
     stack = []
-    s = list(s)
     for i in s:
         if len(stack) == 0:
             stack.append(i)
@@ -11,5 +10,4 @@ def solution(s):
     if len(stack) == 0:
         return 1
     else:
-        return 0 
-                  
+        return 0
