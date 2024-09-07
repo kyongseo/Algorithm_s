@@ -1,14 +1,7 @@
 def solution(brown, yellow):
-    answer = []
-    yellow_x = 0
-    yellow_y = 0
-    for i in range(1, yellow+1):
-        if yellow % i == 0:
-            yellow_x = yellow // i
-            yellow_y = i
-            if 2*yellow_x + 2*yellow_y + 4 == brown:
-                answer.append(yellow_x+2)
-                answer.append(yellow_y+2)
-                break 
-            answer.sort(reverse = True)
-    return answer
+    total = brown + yellow # 12
+    for i in range(3, int(total**0.5)+1): # 3~3.6
+        if total % i ==0:
+            j = total // i
+            if (j -2) * (i -2) == yellow:
+                return [j, i]
