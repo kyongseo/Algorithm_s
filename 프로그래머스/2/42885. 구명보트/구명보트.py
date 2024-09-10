@@ -4,13 +4,12 @@ def solution(people, limit):
     answer = 0
     people.sort()
     people = deque(people)
-    while(len(people) > 1):
+    while len(people) > 1:
         back = people.pop()
         if back + people[0] <= limit:
             people.popleft()
         answer += 1
-
-    if len(people) == 1 and people.pop() <= limit:
+    if len(people) == 1 and people[0] <= limit:
         answer += 1
 
     return answer
