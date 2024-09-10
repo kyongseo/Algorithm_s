@@ -1,7 +1,7 @@
 from collections import deque
 
 def solution(people, limit):
-    answer = 0
+    answer = 0 
     people.sort()
     people = deque(people)
     while len(people) > 1:
@@ -9,6 +9,7 @@ def solution(people, limit):
         if back + people[0] <= limit:
             people.popleft()
         answer += 1
+
     if len(people) == 1 and people[0] <= limit:
         answer += 1
 
