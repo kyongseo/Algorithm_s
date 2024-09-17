@@ -1,6 +1,6 @@
 def solution(elements):
     el = elements + elements
-    n = len(elements) # 5
+    n = len(elements) 
     answ = set()
     
     for i in range(1, n + 1):
