@@ -9,5 +9,6 @@ def solution(nums):
         answer=chosen_length
     else:
         answer=answer_leng
+        
     return answer
             
