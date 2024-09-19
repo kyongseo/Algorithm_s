@@ -1,14 +1,10 @@
 def solution(nums):
-    answer = 0
-    chosen_length=len(nums)//2
-    tmp=set(nums)
-    num_li=list(tmp)
-    answer_leng=len(num_li)
-    
-    if chosen_length<answer_leng:
-        answer=chosen_length
+    choose_len = len(nums) // 2
+    temp = list(set(nums))
+    temp_len = len(temp)
+
+    if temp_len < choose_len:
+        return temp_len
     else:
-        answer=answer_leng
-        
-    return answer
+        return choose_len
             
