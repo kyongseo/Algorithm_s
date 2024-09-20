@@ -1,10 +1,9 @@
 def solution(nums):
     choose_len = len(nums) // 2
-    temp = list(set(nums))
-    temp_len = len(temp)
+    temp_len = len(list(set(nums)))
 
-    if temp_len < choose_len:
-        return temp_len
-    else:
+    if choose_len < temp_len:
         return choose_len
+    else:
+        return temp_len
             
