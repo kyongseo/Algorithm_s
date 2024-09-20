@@ -1,10 +1,13 @@
 from collections import deque
 
 def solution(participant, completion):
-    # 리스트를 deque로 변환
-    participant = deque(sorted(participant))
-    completion = deque(sorted(completion))
 
+    participant.sort()
+    completion.sort()
+
+    participant = deque(participant)
+    completion = deque(completion)
+    
     while completion:
         p_name = participant.popleft()
         c_name = completion.popleft()
@@ -13,4 +16,3 @@ def solution(participant, completion):
             return p_name
 
     return participant[0]
-      
