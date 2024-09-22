@@ -8,4 +8,5 @@ def solution(clothes):
             dic[i[1]] = 1
     for i in dic.keys():
         answer *= dic[i] + 1
+        
     return answer - 1
