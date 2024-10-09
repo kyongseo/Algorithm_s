@@ -1,9 +1,10 @@
 from math import comb
 
-def bridge(n, m):
-    return comb(m, n) 
+def combina(n,m):
+  return comb(m, n)
 
-T = int(input())
-for _ in range(T):
-    n, m = map(int, input().split())
-    print(bridge(n, m))
+n = int(input())
+
+for _ in range(n):
+  n , m = map(int, input().split())
+  print(combina(n, m))
